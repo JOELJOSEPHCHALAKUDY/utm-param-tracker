@@ -17,7 +17,7 @@ Make sure you configure the domain list in the script to control which the url p
         // '127.0.0.1'
     ],
     
-``````
+``````````
 
 
 Note: *You can minify the script after your customization to immprove the performance and then add it you your website *
