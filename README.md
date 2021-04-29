@@ -1,4 +1,4 @@
-# utm-parameter-tracker
+# utm-parameters-tracker
 
 A script to track  and Transfer UTM Parameters From One Page To Another
 
