@@ -334,12 +334,16 @@ window.UtmForm = new UtmForm(_uf);
     }
     // decorates the URL with query params
     function decorateUrl(urlToDecorate) {
-        urlToDecorate = (urlToDecorate.indexOf('?') === -1) ? urlToDecorate + '?' : urlToDecorate + '&';
         var collectedQueryParams = [];
         for (var queryIndex = 0; queryIndex < queryParams.length; queryIndex++) {
             if (getQueryParam(queryParams[queryIndex])) {
                 collectedQueryParams.push(queryParams[queryIndex] + '=' + getQueryParam(queryParams[queryIndex]))
             }
+        }
+        if(collectedQueryParams.length > 0){
+            urlToDecorate = (urlToDecorate.indexOf('?') === -1) ? urlToDecorate + '?' : urlToDecorate + '&';
+        } else {
+            urlToDecorate = (urlToDecorate.indexOf('?') === -1) ? urlToDecorate : urlToDecorate + '&';
         }
         return urlToDecorate + collectedQueryParams.join('&');
     }
